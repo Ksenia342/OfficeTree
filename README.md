@@ -1,11 +1,11 @@
 # OfficeTree
 
 ```markdown
-# OfficeTree — клиент-серверный каталог сотрудников офиса
+OfficeTree — клиент-серверный каталог сотрудников офиса
 
 Веб-приложение для учёта сотрудников: кто в какой команде, какая зарплата, кто менеджер. Браузер говорит с REST API, данные живут в MongoDB. Подходит как учебный, но цельный fullstack-пример: модель, модули CRUD, роуты, статический фронт.
 
-## Стек технологий
+Стек технологий
 
 ![Node.js](https://img.shields.io/badge/Node.js-ESM-339933?logo=nodedotjs)
 ![Express](https://img.shields.io/badge/Express-4-black?logo=express)
@@ -18,7 +18,7 @@
 - **dotenv**, **cors**
 - Статический фронт: HTML, CSS, `public/js/app.js`
 
-## Ключевой функционал
+Ключевой функционал
 
 REST API `/api/employees`:
 

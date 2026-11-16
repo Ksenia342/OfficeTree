@@ -1,26 +1,30 @@
-# OfficeTree
+# 🌳 OfficeTree
 
-```markdown
-OfficeTree — клиент-серверный каталог сотрудников офиса
+Веб-приложение для учёта сотрудников офиса: кто в какой команде, какая у него зарплата и кто его менеджер. Браузер работает с REST API, данные хранятся в MongoDB.
 
-Веб-приложение для учёта сотрудников: кто в какой команде, какая зарплата, кто менеджер. Браузер говорит с REST API, данные живут в MongoDB. Подходит как учебный, но цельный fullstack-пример: модель, модули CRUD, роуты, статический фронт.
+![Node.js](https://img.shields.io/badge/Node.js-ESM-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express-4-000000?style=flat-square&logo=express)
+![MongoDB](https://img.shields.io/badge/MongoDB-Mongoose-47A248?style=flat-square&logo=mongodb&logoColor=white)
+![REST](https://img.shields.io/badge/API-REST-0EA5E9?style=flat-square)
 
-Стек технологий
+## 🛠 Стек
 
-![Node.js](https://img.shields.io/badge/Node.js-ESM-339933?logo=nodedotjs)
-![Express](https://img.shields.io/badge/Express-4-black?logo=express)
-![MongoDB](https://img.shields.io/badge/MongoDB-Mongoose-47A248?logo=mongodb)
-![HTML](https://img.shields.io/badge/HTML%20%2B%20CSS-frontend-e34f26)
-![REST](https://img.shields.io/badge/API-REST-0ea5e9)
-
-- **Node.js** (ES-модули), **Express 4**
-- **MongoDB** + **Mongoose 8** (схема, индекс по менеджеру, timestamps)
+- **Node.js** (ES-модули) и **Express 4**
+- **MongoDB** и **Mongoose 8**: схема, индекс по менеджеру, timestamps
 - **dotenv**, **cors**
-- Статический фронт: HTML, CSS, `public/js/app.js`
+- Фронтенд: HTML, CSS и `public/js/app.js`
 
-Ключевой функционал
+## ✨ Возможности
 
-REST API `/api/employees`:
+- добавление, редактирование и удаление сотрудников;
+- поиск по ID;
+- выборка сотрудников по фамилии менеджера;
+- веб-форма для всех операций;
+- глобальный обработчик ошибок.
+
+Поля сотрудника: `employeeId`, `surname`, `salary`, `managerSurname`.
+
+## 🔌 API
 
 | Метод | Путь | Назначение |
 | --- | --- | --- |
@@ -30,15 +34,12 @@ REST API `/api/employees`:
 | `PUT` | `/api/employees/:employeeId` | обновление |
 | `DELETE` | `/api/employees/:employeeId` | удаление |
 
-- Поля сотрудника: `employeeId`, `surname`, `salary`, `managerSurname`.
-- Бизнес-логика разнесена по модулям (`addEmployee`, `updateEmployee`, `deleteEmployee`, `getEmployeeById`, `listEmployeesByManager`).
-- Веб-форма: добавление, выборка по менеджеру, поиск по ID, правка и удаление.
-- Глобальный обработчик ошибок Express.
-
-## Быстрый запуск
+## 🚀 Запуск
 
 Нужны **Node.js 18+** и запущенный **MongoDB**.
 
 ```bash
 cd вяп7
 npm install
+npm start
+```
